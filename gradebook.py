@@ -24,18 +24,26 @@ class Person:
         self.status = status
 
 class Instructor(Person):
-    def __init__(self, firstname, lastname, dob, alive, instructor_id):  # fname, lname, dob, alive, instructor_id
+    def __init__(self, firstname, lastname, dob, alive, instructor_id):  # firstname, lastname, dob, alive, instructor_id
         self.firstname = firstname
         self.lastname = lastname
         self.dob = dob
         self.alive = alive
-        # super(Person).__init__(firstname, lastname, dob, alive)  # (fname, lname, dob, alive)
+        # super(Person).__init__(firstname, lastname, dob, alive)
         self.instructor_id = f"Instructor_{instructor_id}" + str(uuid.uuid4())
 
+
 class Student(Person):
-    def __init__(self, firstname, lastname, dob, alive, student_id): #fname, lname, dob, alive, student_id
-        super(Person).__init__(firstname, lastname, dob, alive)  # (fname, lname, dob, alive)
+
+    def __init__(self, student_id): #fname, lname, dob, alive, student_id
+        super(Person).__init__()  # (fname, lname, dob, alive)
         self.student_id = f"Instructor_{student_id}" + str(uuid.uuid4())
+
+    #  why doesn't this ^^^ work versus this vvv
+
+    # def __init__(self, firstname, lastname, dob, alive, student_id): #fname, lname, dob, alive, student_id
+    #     super(Person).__init__(firstname, lastname, dob, alive)  # (fname, lname, dob, alive)
+    #     self.student_id = f"Instructor_{student_id}" + str(uuid.uuid4())
 
 class ZipCodeStudent(Person):
     pass
