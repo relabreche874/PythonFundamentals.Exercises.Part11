@@ -25,11 +25,7 @@ class Person:
 
 class Instructor(Person):
     def __init__(self, firstname, lastname, dob, alive, instructor_id):  # firstname, lastname, dob, alive, instructor_id
-        self.firstname = firstname
-        self.lastname = lastname
-        self.dob = dob
-        self.alive = alive
-        # super(Person).__init__(firstname, lastname, dob, alive)
+        super(Person).__init__(firstname, lastname, dob, alive)
         self.instructor_id = f"Instructor_{instructor_id}" + str(uuid.uuid4())
 
 
