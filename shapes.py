@@ -3,12 +3,12 @@ class Rectangle:
         self.length = length
         self.width = width
 
-        def area(self):
-            return self.length * self.width
+    def area(self):
+        return self.length * self.width
 
-        def perimeter(self):
-            return (self.length + self.width) * 2
+    def perimeter(self):
+        return (self.length + self.width) * 2
 
 class Square(Rectangle):
-    def __init__(self, length):
-        super().__init__(length, length)
+    def __init__(self, length):  # takes one value == length
+        super().__init__(length, length)  # super equals rectangle conceptually
